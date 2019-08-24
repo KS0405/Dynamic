@@ -1,0 +1,34 @@
+@( sneaks:List[Sneakers])
+<br>
+<h1>Sneakers List Information </h1>
+
+<table class="table table-striped">
+    <tr>
+        <th>Name</th>
+        <th>Color</th>
+        <th>Size</th>
+        <th>Brand</th>
+        <th>Gender</th>
+        <th>Price</th>
+        <th>RubberSoles</th>
+        <th>ShoeHeadStyle</th>
+        <th>Shoelinetype</th>
+        <th>TypeOfFabric</th>
+        <th>Design</th>
+    </tr>
+    @for(sn<-sneaks){
+        <tr>
+           <td>@sn.getName</td>
+            <td>@sn.getColor</td>
+            <td>@sn.getSize</td>
+            <td>@sn.getBrand</td>
+            <td>@sn.getGender</td>
+            <td>@sn.getPrice</td>
+            <td>@sn.getRubberSoles</td>
+            <td>@sn.getShoeHeadStyle</td>
+            <td>@sn.getShoelinetype</td>
+            <td>@sn.getTypeOfFabric</td>
+            <td>@sn.getDesign</td>
+        </tr>
+    }
+</table>

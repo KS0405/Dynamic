@@ -1,0 +1,73 @@
+@(shoes : Sneakers)
+<html>
+    <head>
+        <title>Show Sneakers Data</title>
+        <link rel="stylesheet" href="/assets/stylesheets/css/bootstap.css">
+    </head>
+
+    <body>
+        <h1>
+            Shoes Information
+        </h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2" style="..."></div>
+                <div class="col-md-8" style="...">
+                    <table class="table table-success">
+                        <tr>
+                            <th>ชื่อรองเท้า</th>
+                            <th>@shoes.getName()</th>
+                        </tr>
+
+                        <tr>
+                            <th>สี</th>
+                            <th>@shoes.getColor()</th>
+                        </tr>
+
+                        <tr>
+                            <th>แบรนด์</th>
+                            <th>@shoes.getBrand()</th>
+                        </tr>
+
+                        <tr>
+                            <th>พื้นรองเท้า</th>
+                            <th>@shoes.getRubberSoles()</th>
+                        </tr>
+
+                        <tr>
+                            <th>หัวรองเท้า</th>
+                            <th>@shoes.getShoeHeadStyle()</th>
+                        </tr>
+
+                        <tr>
+                            <th>เชื่อกผูกรองเท้า</th>
+                            <th>@shoes.getShoelinetype()</th>
+                        </tr>
+
+                        <tr>
+                            <th>ดีไซน์</th>
+                            <th>@shoes.getDesign()</th>
+                        </tr>
+
+                        <tr>
+                            <th>ราคา</th>
+                            <th>@shoes.getPrice()</th>
+                        </tr>
+
+                        <tr>
+                            <th>ขนาด</th>
+                            <th>@shoes.getSize()</th>
+                        </tr>
+
+                        <tr>
+                            <th>ประเภทของผ้า</th>
+                            <th>@shoes.getTypeOfFabric()</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,23 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+GET     /Profile                    controllers.Application.Pro()
+GET     /Hobby                      controllers.Application.hobby()
+GET     /Travel                     controllers.Application.travel()
+GET     /Target                     controllers.Application.Target()
+GET     /Mains                      controllers.Application.Mains()
+GET     /ShowSneak                  controllers.Application.ShowSneakers()
+GET     /ShowSneakersList           controllers.Application.ShowSneakersList()
+GET     /SneakersForm               controllers.Application.sneakersForm()
+POST    /postSneakers               controllers.Application.post()
+
+GET      /shoesGetHelper             controllers.Application.shoes_form_helper()
+POST    /shoesPostHelper              controllers.Application.shoes_post_helper()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+GET     /profile                    controllers.Application.kak()
+GET     /photo                      controllers.Application.bar()

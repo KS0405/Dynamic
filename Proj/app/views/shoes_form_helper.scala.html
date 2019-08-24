@@ -1,0 +1,41 @@
+@(myForm:Form[Sneakers])
+@import helper._;
+
+<html>
+    <head>
+        <title>My Helper Form</title>
+    </head>
+
+    <body>
+    @helper.form(action = routes.Application.shoes_post_helper()){
+        @inputText(myForm("name"),'_label ->"ชื่อรองเท้า", 'size->"20" ,'maxlength->"30", 'required->"required")
+
+        @inputText(myForm("color"),'_label ->"สี",'size->"20" ,'maxlength->"30", 'required->"required")
+
+        @inputText(myForm("price"),'_label ->"ราคา", 'size->"10",'required->"required")
+
+        @inputText(myForm("size"),'_label ->"ขนาด", 'size->"10",'required->"required")
+
+        @select(myForm("brand"),options=Seq("Nike"->"Nike","Adidas"->"Adidas","New balance"->"New balance","Onitsuka Tiger"->"Onitsuka Tiger","Reebok"->"Reebok","Lacoste"->"Lacoste","Converse"->"Converse","Puma"->"Puma","Vans"->"Vans"))
+
+        @inputText(myForm("rubberSoles"),'_label ->"พื้นรองเท้า",'size->"20" ,'maxlength->"30", 'required->"required")
+
+        @inputText(myForm("shoeHeadStyle"),'_label ->"หัวรองเท้า",'size->"20" ,'maxlength->"30", 'required->"required")
+
+        @inputText(myForm("shoelinetype"),'_label ->"เชือกผูกรองเท้า",'size->"20" ,'maxlength->"30", 'required->"required")
+
+        @inputText(myForm("typeOfFabric"),'_label ->"หนังรองเท้า",'size->"20" ,'maxlength->"30", 'required->"required")
+
+        @inputText(myForm("design"),'_label ->"ดีไซน์",'size->"20" ,'maxlength->"30", 'required->"required")
+
+        <input type="submit" value="บันทึก" class="btn btn-success">
+        <input type="reset" value="เคลียร์" class="btn btn-danger">
+        }
+
+    </body>
+</html>
+
+
+
+
+

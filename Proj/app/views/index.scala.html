@@ -1,0 +1,41 @@
+@(content:Html)
+<nav class="navbar navbar-expand-sm bg-success navbar-light">
+        <!--Brand/logo-->
+    <a class="navbar-brand" href="/">
+        <img src="assets/images/logo.png"alt="logo" style="width:120px;height:120px;">
+    </a>
+        <!-- Links -->
+    <ul class="navbar-nav">
+            <!--<li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>-->
+        <li class="nav-item">
+            <a class="nav-link" href="/profile">Profile</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/photographyskills">Photography skills</a>
+        </li>
+
+
+    </ul>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12" style="background-color: tomato">
+            <br>
+            <h1 style="font-family: AngsanaUPC;" align="center">Dynamic Web Programming</h1>
+            <br>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-1" style="background-color: white">
+             <br>
+        </div>
+        <div class="col-md-11" style="background-color:lightsalmon">
+        @content
+        </div>
+    </div>
+</div>
+
