@@ -62,8 +62,8 @@ Seq[Any](format.raw/*1.1*/("""<html>
 }
                 /*
                     -- GENERATED --
-                    DATE: Wed Aug 21 14:59:32 ICT 2019
-                    SOURCE: D:/Proj/app/views/bar.scala.html
+                    DATE: Wed Sep 04 11:11:04 ICT 2019
+                    SOURCE: D:/Dynamic/Proj/app/views/bar.scala.html
                     HASH: 8e1891315c68f5d28d1e89f01b236cde8ec40e75
                     MATRIX: 853->0
                     LINES: 29->1
