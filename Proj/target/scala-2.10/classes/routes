@@ -14,6 +14,8 @@ GET     /ShowSneakersList           controllers.Application.ShowSneakersList()
 GET     /SneakersForm               controllers.Application.sneakersForm()
 POST    /postSneakers               controllers.Application.post()
 
+GET     /listCompany                controllers.Application.listCompany()
+
 GET      /shoesGetHelper             controllers.Application.shoes_form_helper()
 POST    /shoesPostHelper              controllers.Application.shoes_post_helper()
 

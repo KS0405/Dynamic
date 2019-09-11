@@ -1,5 +1,6 @@
 package controllers;
 
+import models.Company;
 import models.Shoes;
 import models.Sneakers;
 import play.api.templates.Html;
@@ -140,6 +141,35 @@ public class Application extends Controller {
 
        }
    }
+
+   public static List<Company> companyList=new ArrayList<Company>();
+   public static Form<Company> companyForm=Form.form(Company.class);
+   public static Company company;
+
+   public static Result listCompany(){
+       companyList=Company.list();
+       return Application.main(listCompany.render(companyList));
+   }
+
+   public static Result newCompany(){//ใช้สำหรับเรียกวิวรับข้อมูล หลังผู้ใช้กรอกข้อมูล
+       companyForm= Form.form(Company.class);
+
+       return Application.main(newCompany.render(companyForm));
+   }
+    public static Result createCompany(){//ใช้สำหรับรับค่าจากการป้อนของผู้ใช้ระบบนำไปบันทึกหรือเพิ่ม
+        return ok();
+    }
+
+    public static Result editCompany(String id){//ใช้สำหรับการค้นหาบริษัทที่ต้องการแก้ไขและเรียกวิวแก้ไขข้อมูล
+        return ok();
+    }
+    public static Result updateCompany(){//ใช้สำหรับรับค่าที่ผู้ใช้ป้อนแล้วนำไปแก้ไข
+        return ok();
+    }
+    public static Result deleteCompany(String id){//ใช้สำหรับการค้นหาบริษัทที่ต้องการลบและทำการลบข้อมูล
+       return ok();
+    }
+
 }
 
 

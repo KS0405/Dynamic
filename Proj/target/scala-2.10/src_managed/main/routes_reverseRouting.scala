@@ -1,6 +1,6 @@
 // @SOURCE:D:/Dynamic/Proj/conf/routes
-// @HASH:dcbb0e9d13cb00e811394e0e1bb793e4c11324d3
-// @DATE:Wed Sep 04 11:11:03 ICT 2019
+// @HASH:2118e216ae499686f985afd66a52aae938c66cad
+// @DATE:Tue Sep 10 22:50:11 ICT 2019
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -13,10 +13,16 @@ import play.libs.F
 import Router.queryString
 
 
+// @LINE:34
+// @LINE:33
+// @LINE:32
+// @LINE:29
+// @LINE:28
+// @LINE:25
 // @LINE:23
 // @LINE:22
-// @LINE:21
-// @LINE:18
+// @LINE:20
+// @LINE:19
 // @LINE:17
 // @LINE:15
 // @LINE:14
@@ -30,11 +36,11 @@ import Router.queryString
 // @LINE:6
 package controllers {
 
-// @LINE:21
+// @LINE:32
 class ReverseAssets {
     
 
-// @LINE:21
+// @LINE:32
 def at(file:String): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
 }
@@ -43,9 +49,15 @@ def at(file:String): Call = {
 }
                           
 
+// @LINE:34
+// @LINE:33
+// @LINE:29
+// @LINE:28
+// @LINE:25
 // @LINE:23
 // @LINE:22
-// @LINE:18
+// @LINE:20
+// @LINE:19
 // @LINE:17
 // @LINE:15
 // @LINE:14
@@ -78,7 +90,13 @@ def Mains(): Call = {
 }
                                                 
 
-// @LINE:23
+// @LINE:25
+def deleteCompany(id:String): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "deleteCompany/;id" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("id", id)))))
+}
+                                                
+
+// @LINE:34
 def bar(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "photo")
 }
@@ -102,15 +120,21 @@ def Target(): Call = {
 }
                                                 
 
-// @LINE:18
+// @LINE:29
 def shoes_post_helper(): Call = {
    Call("POST", _prefix + { _defaultPrefix } + "shoesPostHelper")
 }
                                                 
 
-// @LINE:22
+// @LINE:33
 def kak(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "profile")
+}
+                                                
+
+// @LINE:19
+def newCompany(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "newCompany")
 }
                                                 
 
@@ -120,15 +144,27 @@ def hobby(): Call = {
 }
                                                 
 
+// @LINE:23
+def updateCompany(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "updateCompany")
+}
+                                                
+
 // @LINE:13
 def ShowSneakersList(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "ShowSneakersList")
 }
                                                 
 
-// @LINE:17
+// @LINE:28
 def shoes_form_helper(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "shoesGetHelper")
+}
+                                                
+
+// @LINE:22
+def editCompany(id:String): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "editCompany/;id" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("id", id)))))
 }
                                                 
 
@@ -138,9 +174,21 @@ def travel(): Call = {
 }
                                                 
 
+// @LINE:20
+def createCompany(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "createCompany")
+}
+                                                
+
 // @LINE:6
 def index(): Call = {
    Call("GET", _prefix)
+}
+                                                
+
+// @LINE:17
+def listCompany(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "listCompany")
 }
                                                 
     
@@ -150,10 +198,16 @@ def index(): Call = {
                   
 
 
+// @LINE:34
+// @LINE:33
+// @LINE:32
+// @LINE:29
+// @LINE:28
+// @LINE:25
 // @LINE:23
 // @LINE:22
-// @LINE:21
-// @LINE:18
+// @LINE:20
+// @LINE:19
 // @LINE:17
 // @LINE:15
 // @LINE:14
@@ -167,11 +221,11 @@ def index(): Call = {
 // @LINE:6
 package controllers.javascript {
 
-// @LINE:21
+// @LINE:32
 class ReverseAssets {
     
 
-// @LINE:21
+// @LINE:32
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Assets.at",
    """
@@ -185,9 +239,15 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:34
+// @LINE:33
+// @LINE:29
+// @LINE:28
+// @LINE:25
 // @LINE:23
 // @LINE:22
-// @LINE:18
+// @LINE:20
+// @LINE:19
 // @LINE:17
 // @LINE:15
 // @LINE:14
@@ -235,7 +295,18 @@ def Mains : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:23
+// @LINE:25
+def deleteCompany : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.deleteCompany",
+   """
+      function(id) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "deleteCompany/;id" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("id", id)])})
+      }
+   """
+)
+                        
+
+// @LINE:34
 def bar : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.bar",
    """
@@ -279,7 +350,7 @@ def Target : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:18
+// @LINE:29
 def shoes_post_helper : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.shoes_post_helper",
    """
@@ -290,12 +361,23 @@ def shoes_post_helper : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:22
+// @LINE:33
 def kak : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.kak",
    """
       function() {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "profile"})
+      }
+   """
+)
+                        
+
+// @LINE:19
+def newCompany : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.newCompany",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "newCompany"})
       }
    """
 )
@@ -312,6 +394,17 @@ def hobby : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
+// @LINE:23
+def updateCompany : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.updateCompany",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "updateCompany"})
+      }
+   """
+)
+                        
+
 // @LINE:13
 def ShowSneakersList : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.ShowSneakersList",
@@ -323,12 +416,23 @@ def ShowSneakersList : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:17
+// @LINE:28
 def shoes_form_helper : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.shoes_form_helper",
    """
       function() {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "shoesGetHelper"})
+      }
+   """
+)
+                        
+
+// @LINE:22
+def editCompany : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.editCompany",
+   """
+      function(id) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "editCompany/;id" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("id", id)])})
       }
    """
 )
@@ -345,12 +449,34 @@ def travel : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
+// @LINE:20
+def createCompany : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.createCompany",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "createCompany"})
+      }
+   """
+)
+                        
+
 // @LINE:6
 def index : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.index",
    """
       function() {
       return _wA({method:"GET", url:"""" + _prefix + """"})
+      }
+   """
+)
+                        
+
+// @LINE:17
+def listCompany : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.listCompany",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "listCompany"})
       }
    """
 )
@@ -362,10 +488,16 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
+// @LINE:34
+// @LINE:33
+// @LINE:32
+// @LINE:29
+// @LINE:28
+// @LINE:25
 // @LINE:23
 // @LINE:22
-// @LINE:21
-// @LINE:18
+// @LINE:20
+// @LINE:19
 // @LINE:17
 // @LINE:15
 // @LINE:14
@@ -380,11 +512,11 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 package controllers.ref {
 
 
-// @LINE:21
+// @LINE:32
 class ReverseAssets {
     
 
-// @LINE:21
+// @LINE:32
 def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
 )
@@ -393,9 +525,15 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
+// @LINE:34
+// @LINE:33
+// @LINE:29
+// @LINE:28
+// @LINE:25
 // @LINE:23
 // @LINE:22
-// @LINE:18
+// @LINE:20
+// @LINE:19
 // @LINE:17
 // @LINE:15
 // @LINE:14
@@ -428,7 +566,13 @@ def Mains(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 )
                       
 
-// @LINE:23
+// @LINE:25
+def deleteCompany(id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.deleteCompany(id), HandlerDef(this, "controllers.Application", "deleteCompany", Seq(classOf[String]), "GET", """""", _prefix + """deleteCompany/;id""")
+)
+                      
+
+// @LINE:34
 def bar(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.bar(), HandlerDef(this, "controllers.Application", "bar", Seq(), "GET", """""", _prefix + """photo""")
 )
@@ -452,15 +596,21 @@ def Target(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 )
                       
 
-// @LINE:18
+// @LINE:29
 def shoes_post_helper(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.shoes_post_helper(), HandlerDef(this, "controllers.Application", "shoes_post_helper", Seq(), "POST", """""", _prefix + """shoesPostHelper""")
 )
                       
 
-// @LINE:22
+// @LINE:33
 def kak(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.kak(), HandlerDef(this, "controllers.Application", "kak", Seq(), "GET", """""", _prefix + """profile""")
+)
+                      
+
+// @LINE:19
+def newCompany(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.newCompany(), HandlerDef(this, "controllers.Application", "newCompany", Seq(), "GET", """""", _prefix + """newCompany""")
 )
                       
 
@@ -470,15 +620,27 @@ def hobby(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 )
                       
 
+// @LINE:23
+def updateCompany(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.updateCompany(), HandlerDef(this, "controllers.Application", "updateCompany", Seq(), "POST", """""", _prefix + """updateCompany""")
+)
+                      
+
 // @LINE:13
 def ShowSneakersList(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.ShowSneakersList(), HandlerDef(this, "controllers.Application", "ShowSneakersList", Seq(), "GET", """""", _prefix + """ShowSneakersList""")
 )
                       
 
-// @LINE:17
+// @LINE:28
 def shoes_form_helper(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.shoes_form_helper(), HandlerDef(this, "controllers.Application", "shoes_form_helper", Seq(), "GET", """""", _prefix + """shoesGetHelper""")
+)
+                      
+
+// @LINE:22
+def editCompany(id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.editCompany(id), HandlerDef(this, "controllers.Application", "editCompany", Seq(classOf[String]), "GET", """""", _prefix + """editCompany/;id""")
 )
                       
 
@@ -488,9 +650,21 @@ def travel(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 )
                       
 
+// @LINE:20
+def createCompany(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.createCompany(), HandlerDef(this, "controllers.Application", "createCompany", Seq(), "POST", """""", _prefix + """createCompany""")
+)
+                      
+
 // @LINE:6
 def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.index(), HandlerDef(this, "controllers.Application", "index", Seq(), "GET", """ Home page""", _prefix + """""")
+)
+                      
+
+// @LINE:17
+def listCompany(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.listCompany(), HandlerDef(this, "controllers.Application", "listCompany", Seq(), "GET", """""", _prefix + """listCompany""")
 )
                       
     

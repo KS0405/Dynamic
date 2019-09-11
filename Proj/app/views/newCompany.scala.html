@@ -1,0 +1,6 @@
+@(companyForm:Form[Company]
+@import helper._;
+    <h1>รับข้อมูลบริษัทใหม่</h1>
+   @form(action = routes.Application.createCompany(),'class->"form-control"){
+    @inputText(companyForm("id"),'_label ->"รหัสบริษัท",'size->"13",'maxlength->"10")
+}

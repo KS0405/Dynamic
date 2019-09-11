@@ -50,7 +50,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
                     <a class="dropdown-item" href="/ShowSneakersList">Lab 4 Show List</a>
                     <a class="dropdown-item" href="/SneakersForm">Lab 5 SneakersForm</a>
                     <a class="dropdown-item" href="/shoesGetHelper">Lab 6 helper</a>
-                    <a class="dropdown-item" href="Lab7">Lab 7</a>
+                    <a class="dropdown-item" href="/listCompany">Lab 7 DB Company</a>
 
                 </div>
             </div>
@@ -72,9 +72,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 }
                 /*
                     -- GENERATED --
-                    DATE: Wed Sep 04 11:23:41 ICT 2019
+                    DATE: Tue Sep 10 22:03:25 ICT 2019
                     SOURCE: D:/Dynamic/Proj/app/views/manu.scala.html
-                    HASH: 6be98c1a018ccd6f047abba34b314237d5dfe6fc
+                    HASH: d4f6ac63b805d6b90dd7e3c935cf9eae3561d790
                     MATRIX: 854->0
                     LINES: 29->1
                     -- GENERATED --

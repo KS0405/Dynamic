@@ -7,22 +7,10 @@
 		revision="1.0-SNAPSHOT"
 		conf="compile-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20190904172115"/>
+		date="20190910211152"/>
 	<dependencies>
-		<module organisation="mysql" name="mysql-connector-java">
-			<revision name="5.1.47" status="release" pubdate="20180807135912" resolver="public" artresolver="public" homepage="http://dev.mysql.com/doc/connector-j/en/" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="65">
-				<license name="The GNU General Public License, Version 2" url="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html"/>
-				<metadata-artifact status="successful" details="" size="1105" time="1640" location="D:\play-2.2.6\framework\..\repository\cache\mysql\mysql-connector-java\ivy-5.1.47.xml" searched="true" original-local-location="D:\play-2.2.6\framework\..\repository\cache\mysql\mysql-connector-java\ivy-5.1.47.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.47/mysql-connector-java-5.1.47.pom"/>
-				<caller organisation="proj" name="proj_2.10" conf="compile-internal, compile, provided, optional" rev="5.1.47" rev-constraint-default="5.1.47" rev-constraint-dynamic="5.1.47" callerrev="1.0-SNAPSHOT"/>
-				<artifacts>
-					<artifact name="mysql-connector-java" type="jar" ext="jar" status="successful" details="" size="1007502" time="9570" location="D:\play-2.2.6\framework\..\repository\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.47.jar">
-						<origin-location is-local="false" location="http://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.47/mysql-connector-java-5.1.47.jar"/>
-					</artifact>
-				</artifacts>
-			</revision>
-		</module>
 		<module organisation="com.typesafe.play" name="play-cache_2.10">
-			<revision name="2.2.6" status="release" pubdate="20141113143718" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="63">
+			<revision name="2.2.6" status="release" pubdate="20141113143718" resolver="sbt-chain" artresolver="sbt-chain" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="64">
 				<metadata-artifact status="no" details="" size="2128" time="0" location="D:\play-2.2.6\framework\..\repository\cache\com.typesafe.play\play-cache_2.10\ivy-2.2.6.xml" searched="false" origin-is-local="true" origin-location="D:\play-2.2.6\repository\local\com.typesafe.play\play-cache_2.10\2.2.6\ivys\ivy.xml"/>
 				<caller organisation="proj" name="proj_2.10" conf="compile-internal, compile, provided, optional" rev="2.2.6" rev-constraint-default="2.2.6" rev-constraint-dynamic="2.2.6" callerrev="1.0-SNAPSHOT"/>
 				<artifacts>
@@ -33,13 +21,25 @@
 			</revision>
 		</module>
 		<module organisation="net.sf.ehcache" name="ehcache-core">
-			<revision name="2.6.6" status="release" pubdate="20141005235605" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://ehcache.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="64">
+			<revision name="2.6.6" status="release" pubdate="20141005235605" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://ehcache.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="65">
 				<license name="The Apache Software License, Version 2.0" url="src/assemble/EHCACHE-CORE-LICENSE.txt"/>
 				<metadata-artifact status="no" details="" size="14774" time="0" location="D:\play-2.2.6\framework\..\repository\cache\net.sf.ehcache\ehcache-core\ivy-2.6.6.xml" searched="false" origin-is-local="true" origin-location="D:\play-2.2.6\repository\local\net.sf.ehcache\ehcache-core\2.6.6\ivys\ivy.xml"/>
 				<caller organisation="com.typesafe.play" name="play-cache_2.10" conf="compile" rev="2.6.6" rev-constraint-default="2.6.6" rev-constraint-dynamic="2.6.6" callerrev="2.2.6"/>
 				<artifacts>
 					<artifact name="ehcache-core" type="jar" ext="jar" status="no" details="" size="1346296" time="0" location="D:\play-2.2.6\repository\local\net.sf.ehcache\ehcache-core\2.6.6\jars\ehcache-core.jar">
 						<origin-location is-local="true" location="D:\play-2.2.6\repository\local\net.sf.ehcache\ehcache-core\2.6.6\jars\ehcache-core.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="mysql" name="mysql-connector-java">
+			<revision name="5.1.47" status="release" pubdate="20180807135912" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://dev.mysql.com/doc/connector-j/en/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="63">
+				<license name="The GNU General Public License, Version 2" url="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html"/>
+				<metadata-artifact status="no" details="" size="2441" time="0" location="D:\play-2.2.6\framework\..\repository\cache\mysql\mysql-connector-java\ivy-5.1.47.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.47/mysql-connector-java-5.1.47.pom"/>
+				<caller organisation="proj" name="proj_2.10" conf="compile-internal, compile, provided, optional" rev="5.1.47" rev-constraint-default="5.1.47" rev-constraint-dynamic="5.1.47" callerrev="1.0-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="mysql-connector-java" type="jar" ext="jar" status="no" details="" size="1007502" time="0" location="D:\play-2.2.6\framework\..\repository\cache\mysql\mysql-connector-java\jars\mysql-connector-java-5.1.47.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.47/mysql-connector-java-5.1.47.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>

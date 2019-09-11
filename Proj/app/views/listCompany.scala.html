@@ -1,0 +1,22 @@
+@(companyList:List[Company])
+<h1>รายชื่อบริษัท</h1>
+
+<table class="table table-stripe">
+    <tr>
+        <th>รหัสบริษัท</th>
+        <th>ชื่อบริษัท</th>
+        <th>ที่อยู่</th>
+        <th>รายละเอียด</th>
+        <th><a href="/newCompany">เพิ่มรายชื่อบริษัทใหม่</a> </th>
+    </tr>
+
+    @for(company <-companyList){
+        <tr>
+            <td>@company.getId</td>
+            <td>@company.getName</td>
+            <td>@company.getAddress</td>
+            <td>@company.getDetail</td>
+
+        </tr>
+    }
+</table>

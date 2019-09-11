@@ -1,6 +1,6 @@
 // @SOURCE:D:/Dynamic/Proj/conf/routes
-// @HASH:dcbb0e9d13cb00e811394e0e1bb793e4c11324d3
-// @DATE:Wed Sep 04 11:11:03 ICT 2019
+// @HASH:2118e216ae499686f985afd66a52aae938c66cad
+// @DATE:Tue Sep 10 22:50:11 ICT 2019
 
 
 import play.core._
@@ -69,25 +69,49 @@ private[this] lazy val controllers_Application_post9 = Route("POST", PathPattern
         
 
 // @LINE:17
-private[this] lazy val controllers_Application_shoes_form_helper10 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("shoesGetHelper"))))
+private[this] lazy val controllers_Application_listCompany10 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("listCompany"))))
         
 
-// @LINE:18
-private[this] lazy val controllers_Application_shoes_post_helper11 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("shoesPostHelper"))))
+// @LINE:19
+private[this] lazy val controllers_Application_newCompany11 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("newCompany"))))
         
 
-// @LINE:21
-private[this] lazy val controllers_Assets_at12 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+""",false))))
+// @LINE:20
+private[this] lazy val controllers_Application_createCompany12 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("createCompany"))))
         
 
 // @LINE:22
-private[this] lazy val controllers_Application_kak13 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("profile"))))
+private[this] lazy val controllers_Application_editCompany13 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("editCompany/;id"))))
         
 
 // @LINE:23
-private[this] lazy val controllers_Application_bar14 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("photo"))))
+private[this] lazy val controllers_Application_updateCompany14 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("updateCompany"))))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Profile""","""controllers.Application.Pro()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Hobby""","""controllers.Application.hobby()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Travel""","""controllers.Application.travel()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Target""","""controllers.Application.Target()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Mains""","""controllers.Application.Mains()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ShowSneak""","""controllers.Application.ShowSneakers()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ShowSneakersList""","""controllers.Application.ShowSneakersList()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """SneakersForm""","""controllers.Application.sneakersForm()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """postSneakers""","""controllers.Application.post()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """shoesGetHelper""","""controllers.Application.shoes_form_helper()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """shoesPostHelper""","""controllers.Application.shoes_post_helper()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """profile""","""controllers.Application.kak()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """photo""","""controllers.Application.bar()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+
+// @LINE:25
+private[this] lazy val controllers_Application_deleteCompany15 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("deleteCompany/;id"))))
+        
+
+// @LINE:28
+private[this] lazy val controllers_Application_shoes_form_helper16 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("shoesGetHelper"))))
+        
+
+// @LINE:29
+private[this] lazy val controllers_Application_shoes_post_helper17 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("shoesPostHelper"))))
+        
+
+// @LINE:32
+private[this] lazy val controllers_Assets_at18 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+""",false))))
+        
+
+// @LINE:33
+private[this] lazy val controllers_Application_kak19 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("profile"))))
+        
+
+// @LINE:34
+private[this] lazy val controllers_Application_bar20 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("photo"))))
+        
+def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Profile""","""controllers.Application.Pro()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Hobby""","""controllers.Application.hobby()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Travel""","""controllers.Application.travel()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Target""","""controllers.Application.Target()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Mains""","""controllers.Application.Mains()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ShowSneak""","""controllers.Application.ShowSneakers()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ShowSneakersList""","""controllers.Application.ShowSneakersList()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """SneakersForm""","""controllers.Application.sneakersForm()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """postSneakers""","""controllers.Application.post()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """listCompany""","""controllers.Application.listCompany()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """newCompany""","""controllers.Application.newCompany()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """createCompany""","""controllers.Application.createCompany()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """editCompany/;id""","""controllers.Application.editCompany(id:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """updateCompany""","""controllers.Application.updateCompany()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """deleteCompany/;id""","""controllers.Application.deleteCompany(id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """shoesGetHelper""","""controllers.Application.shoes_form_helper()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """shoesPostHelper""","""controllers.Application.shoes_post_helper()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """profile""","""controllers.Application.kak()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """photo""","""controllers.Application.bar()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]] 
 }}
@@ -176,39 +200,87 @@ case controllers_Application_post9(params) => {
         
 
 // @LINE:17
-case controllers_Application_shoes_form_helper10(params) => {
+case controllers_Application_listCompany10(params) => {
+   call { 
+        invokeHandler(controllers.Application.listCompany(), HandlerDef(this, "controllers.Application", "listCompany", Nil,"GET", """""", Routes.prefix + """listCompany"""))
+   }
+}
+        
+
+// @LINE:19
+case controllers_Application_newCompany11(params) => {
+   call { 
+        invokeHandler(controllers.Application.newCompany(), HandlerDef(this, "controllers.Application", "newCompany", Nil,"GET", """""", Routes.prefix + """newCompany"""))
+   }
+}
+        
+
+// @LINE:20
+case controllers_Application_createCompany12(params) => {
+   call { 
+        invokeHandler(controllers.Application.createCompany(), HandlerDef(this, "controllers.Application", "createCompany", Nil,"POST", """""", Routes.prefix + """createCompany"""))
+   }
+}
+        
+
+// @LINE:22
+case controllers_Application_editCompany13(params) => {
+   call(params.fromQuery[String]("id", None)) { (id) =>
+        invokeHandler(controllers.Application.editCompany(id), HandlerDef(this, "controllers.Application", "editCompany", Seq(classOf[String]),"GET", """""", Routes.prefix + """editCompany/;id"""))
+   }
+}
+        
+
+// @LINE:23
+case controllers_Application_updateCompany14(params) => {
+   call { 
+        invokeHandler(controllers.Application.updateCompany(), HandlerDef(this, "controllers.Application", "updateCompany", Nil,"POST", """""", Routes.prefix + """updateCompany"""))
+   }
+}
+        
+
+// @LINE:25
+case controllers_Application_deleteCompany15(params) => {
+   call(params.fromQuery[String]("id", None)) { (id) =>
+        invokeHandler(controllers.Application.deleteCompany(id), HandlerDef(this, "controllers.Application", "deleteCompany", Seq(classOf[String]),"GET", """""", Routes.prefix + """deleteCompany/;id"""))
+   }
+}
+        
+
+// @LINE:28
+case controllers_Application_shoes_form_helper16(params) => {
    call { 
         invokeHandler(controllers.Application.shoes_form_helper(), HandlerDef(this, "controllers.Application", "shoes_form_helper", Nil,"GET", """""", Routes.prefix + """shoesGetHelper"""))
    }
 }
         
 
-// @LINE:18
-case controllers_Application_shoes_post_helper11(params) => {
+// @LINE:29
+case controllers_Application_shoes_post_helper17(params) => {
    call { 
         invokeHandler(controllers.Application.shoes_post_helper(), HandlerDef(this, "controllers.Application", "shoes_post_helper", Nil,"POST", """""", Routes.prefix + """shoesPostHelper"""))
    }
 }
         
 
-// @LINE:21
-case controllers_Assets_at12(params) => {
+// @LINE:32
+case controllers_Assets_at18(params) => {
    call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
         invokeHandler(controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]),"GET", """ Map static resources from the /public folder to the /assets URL path""", Routes.prefix + """assets/$file<.+>"""))
    }
 }
         
 
-// @LINE:22
-case controllers_Application_kak13(params) => {
+// @LINE:33
+case controllers_Application_kak19(params) => {
    call { 
         invokeHandler(controllers.Application.kak(), HandlerDef(this, "controllers.Application", "kak", Nil,"GET", """""", Routes.prefix + """profile"""))
    }
 }
         
 
-// @LINE:23
-case controllers_Application_bar14(params) => {
+// @LINE:34
+case controllers_Application_bar20(params) => {
    call { 
         invokeHandler(controllers.Application.bar(), HandlerDef(this, "controllers.Application", "bar", Nil,"GET", """""", Routes.prefix + """photo"""))
    }

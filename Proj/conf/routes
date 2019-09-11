@@ -14,6 +14,17 @@ GET     /ShowSneakersList           controllers.Application.ShowSneakersList()
 GET     /SneakersForm               controllers.Application.sneakersForm()
 POST    /postSneakers               controllers.Application.post()
 
+GET     /listCompany                controllers.Application.listCompany()
+
+GET     /newCompany                 controllers.Application.newCompany()
+POST    /createCompany              controllers.Application.createCompany()
+
+GET     /editCompany/;id            controllers.Application.editCompany(id:String)
+POST    /updateCompany              controllers.Application.updateCompany()
+
+GET     /deleteCompany/;id          controllers.Application.deleteCompany(id:String)
+
+
 GET      /shoesGetHelper             controllers.Application.shoes_form_helper()
 POST    /shoesPostHelper              controllers.Application.shoes_post_helper()
 
