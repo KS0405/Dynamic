@@ -1,0 +1,21 @@
+@(myForm:Form[Movie],companyList:List[Company])
+<h1>แก้ไขข้อมูลภาพยนต์</h1>
+@import helper._;
+
+@form(action=routes.Application.updateMovie()){
+ @inputText(myForm("id"),'label->"รหัสภาพยนต์",'size->"15",'Maxlength->"10",'readonly->"readonly")
+    @inputText(myForm("title"),'label->"ชื่อภาพยนต์",'size->"50",'Maxlength->"45")
+    @inputText(myForm("actor"),'label->"นักแสดงนำฝ่ายชาย",'size->"50",'Maxlength->"45")
+    @inputText(myForm("actress"),'label->"นักแสดงนำฝ่ายหญิง",'size->"50",'Maxlength->"45")
+    @inputText(myForm("year"),'label->"ปีที่ผลิตภาพยนต์",'size->"5",'Maxlength->"4")
+    @select(myForm("company.id"),options=companyList.map(company=>company.getId->company.getName),'label->"บริษัทผู้ผลิต")
+    <input type="submit" value="บันทึก">
+    <input type="reset" value="ยกเลิก">
+
+}
+   @if(flash.containsKey("errMessage")){
+   <div class="alert alert-danger">
+      <strong>Error!</strong>
+      @flash.get("errMessage")
+   </div>
+}

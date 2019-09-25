@@ -47,6 +47,10 @@ Seq[Any](format.raw/*1.1*/("""<html>
                 <li class="nav-item">
                     <a class="nav-link" href="Target">เป้าหมาย</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="product">TEST</a>
+                </li>
+
             </ul>
         </nav>
     </body>
@@ -62,9 +66,9 @@ Seq[Any](format.raw/*1.1*/("""<html>
 }
                 /*
                     -- GENERATED --
-                    DATE: Wed Sep 04 11:11:04 ICT 2019
-                    SOURCE: D:/Dynamic/Proj/app/views/bar.scala.html
-                    HASH: 8e1891315c68f5d28d1e89f01b236cde8ec40e75
+                    DATE: Wed Sep 25 10:40:52 ICT 2019
+                    SOURCE: D:/Proj/app/views/bar.scala.html
+                    HASH: ac5a12f70720cf6dfe8cbf216435643b5aa75976
                     MATRIX: 853->0
                     LINES: 29->1
                     -- GENERATED --

@@ -1,0 +1,33 @@
+@(movieList:List[Movie])
+
+<h1>Movie List</h1>
+<table class="table table-stripe">
+    <tr>
+        <td>รหัสภาพยนต์</td>
+        <td>ชื่อเรื่อง</td>
+        <td>นักแสดงนำฝ่ายชาย</td>
+        <td>นักแสดงนำฝ่ายหญิง</td>
+        <td>ปี</td>
+        <td>บริษัทผู้ผลิต</td>
+        <td>ที่อยู่</td>
+        <th><a href="/newMovie" class="btn btn-info">เพิ่มรายชื่อภาพยนต์</a> </th>
+    </tr>
+    @for(movie <- movieList){
+        <tr>
+            <td>@movie.getId </td>
+            <td>@movie.getTitle</td>
+            <td>@movie.getActor</td>
+            <td>@movie.getActress</td>
+            <td>@movie.getYear</td>
+            <td>@movie.getCompany.getName</td>
+            <td>@movie.getCompany.getAddress</td>
+
+            <td>
+                <a href="/editMovie/@movie.getId" class="btn btn-info">แก้ไข</a>
+                <a href="/deleteMovie/@movie.getId"class="btn btn-danger"
+                onclick="return confirm('โปรดยืนยันการลบข้อมูลภาพยนต์ที่เลือก?')"
+                >ลบ</a>
+            </td>
+        </tr>
+    }
+</table>

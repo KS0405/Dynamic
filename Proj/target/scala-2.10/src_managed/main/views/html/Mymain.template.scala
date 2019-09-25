@@ -27,7 +27,6 @@ object Mymain extends BaseScalaTemplate[play.api.templates.HtmlFormat.Appendable
         _display_ {
 
 Seq[Any](format.raw/*1.18*/("""
-<html>
     <head>
         <title>Dynamic Web Programming</title>
         <link type="text/css" rel="stylesheet"
@@ -38,20 +37,20 @@ Seq[Any](format.raw/*1.18*/("""
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    """),_display_(Seq[Any](/*13.22*/bar())),format.raw/*13.27*/("""
+                    """),_display_(Seq[Any](/*12.22*/bar())),format.raw/*12.27*/("""
                 </div>
 
             </div>
             <div class="row">
                 <div class="col-md-2" style="background-color: #0b2e13">
 
-                """),_display_(Seq[Any](/*20.18*/manu())),format.raw/*20.24*/("""
+                """),_display_(Seq[Any](/*19.18*/manu())),format.raw/*19.24*/("""
 
                 </div>
 
                 <div class="col-md-10" style="background-color: cornsilk;">
 
-                """),_display_(Seq[Any](/*26.18*/content)),format.raw/*26.25*/("""
+                """),_display_(Seq[Any](/*25.18*/content)),format.raw/*25.25*/("""
                 </div>
             </div>
         </div>
@@ -68,11 +67,11 @@ Seq[Any](format.raw/*1.18*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Wed Sep 04 11:11:04 ICT 2019
-                    SOURCE: D:/Dynamic/Proj/app/views/Mymain.scala.html
-                    HASH: 05e19a007888ca3c3f7a5acaa42a2a322949bdab
-                    MATRIX: 773->1|883->17|1252->350|1279->355|1480->520|1508->526|1664->646|1693->653
-                    LINES: 26->1|29->1|41->13|41->13|48->20|48->20|54->26|54->26
+                    DATE: Wed Sep 25 10:40:53 ICT 2019
+                    SOURCE: D:/Proj/app/views/Mymain.scala.html
+                    HASH: eb40048540802b26091dce0cce07a7f4fcba4584
+                    MATRIX: 773->1|883->17|1245->343|1272->348|1473->513|1501->519|1657->639|1686->646
+                    LINES: 26->1|29->1|40->12|40->12|47->19|47->19|53->25|53->25
                     -- GENERATED --
                 */
             

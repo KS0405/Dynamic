@@ -1,6 +1,6 @@
-// @SOURCE:D:/Dynamic/Proj/conf/routes
-// @HASH:2118e216ae499686f985afd66a52aae938c66cad
-// @DATE:Tue Sep 10 22:50:11 ICT 2019
+// @SOURCE:D:/Proj/conf/routes
+// @HASH:2a23f5647d217e469e915269c5058f7d302eebe7
+// @DATE:Wed Sep 25 13:09:22 ICT 2019
 
 
 import play.core._
@@ -81,7 +81,7 @@ private[this] lazy val controllers_Application_createCompany12 = Route("POST", P
         
 
 // @LINE:22
-private[this] lazy val controllers_Application_editCompany13 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("editCompany/;id"))))
+private[this] lazy val controllers_Application_editCompany13 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("editCompany/"),DynamicPart("id", """[^/]+""",true))))
         
 
 // @LINE:23
@@ -89,7 +89,7 @@ private[this] lazy val controllers_Application_updateCompany14 = Route("POST", P
         
 
 // @LINE:25
-private[this] lazy val controllers_Application_deleteCompany15 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("deleteCompany/;id"))))
+private[this] lazy val controllers_Application_deleteCompany15 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("deleteCompany/"),DynamicPart("id", """[^/]+""",true))))
         
 
 // @LINE:28
@@ -100,18 +100,50 @@ private[this] lazy val controllers_Application_shoes_form_helper16 = Route("GET"
 private[this] lazy val controllers_Application_shoes_post_helper17 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("shoesPostHelper"))))
         
 
+// @LINE:31
+private[this] lazy val controllers_Application_frmProduct18 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("product"))))
+        
+
 // @LINE:32
-private[this] lazy val controllers_Assets_at18 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+""",false))))
+private[this] lazy val controllers_Application_postProduct19 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("postProduct"))))
         
 
-// @LINE:33
-private[this] lazy val controllers_Application_kak19 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("profile"))))
+// @LINE:35
+private[this] lazy val controllers_Application_listMovie20 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("listMovie"))))
         
 
-// @LINE:34
-private[this] lazy val controllers_Application_bar20 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("photo"))))
+// @LINE:36
+private[this] lazy val controllers_Application_newMovie21 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("newMovie"))))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Profile""","""controllers.Application.Pro()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Hobby""","""controllers.Application.hobby()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Travel""","""controllers.Application.travel()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Target""","""controllers.Application.Target()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Mains""","""controllers.Application.Mains()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ShowSneak""","""controllers.Application.ShowSneakers()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ShowSneakersList""","""controllers.Application.ShowSneakersList()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """SneakersForm""","""controllers.Application.sneakersForm()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """postSneakers""","""controllers.Application.post()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """listCompany""","""controllers.Application.listCompany()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """newCompany""","""controllers.Application.newCompany()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """createCompany""","""controllers.Application.createCompany()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """editCompany/;id""","""controllers.Application.editCompany(id:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """updateCompany""","""controllers.Application.updateCompany()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """deleteCompany/;id""","""controllers.Application.deleteCompany(id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """shoesGetHelper""","""controllers.Application.shoes_form_helper()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """shoesPostHelper""","""controllers.Application.shoes_post_helper()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """profile""","""controllers.Application.kak()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """photo""","""controllers.Application.bar()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+
+// @LINE:37
+private[this] lazy val controllers_Application_createMovie22 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("createMovie"))))
+        
+
+// @LINE:38
+private[this] lazy val controllers_Application_editMovie23 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("editMovie/"),DynamicPart("id", """[^/]+""",true))))
+        
+
+// @LINE:39
+private[this] lazy val controllers_Application_updateMovie24 = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("updateMovie"))))
+        
+
+// @LINE:40
+private[this] lazy val controllers_Application_deleteMovie25 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("deleteMovie/"),DynamicPart("id", """[^/]+""",true))))
+        
+
+// @LINE:42
+private[this] lazy val controllers_Assets_at26 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+""",false))))
+        
+
+// @LINE:43
+private[this] lazy val controllers_Application_kak27 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("profile"))))
+        
+
+// @LINE:44
+private[this] lazy val controllers_Application_bar28 = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("photo"))))
+        
+def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Profile""","""controllers.Application.Pro()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Hobby""","""controllers.Application.hobby()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Travel""","""controllers.Application.travel()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Target""","""controllers.Application.Target()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """Mains""","""controllers.Application.Mains()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ShowSneak""","""controllers.Application.ShowSneakers()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """ShowSneakersList""","""controllers.Application.ShowSneakersList()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """SneakersForm""","""controllers.Application.sneakersForm()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """postSneakers""","""controllers.Application.post()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """listCompany""","""controllers.Application.listCompany()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """newCompany""","""controllers.Application.newCompany()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """createCompany""","""controllers.Application.createCompany()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """editCompany/$id<[^/]+>""","""controllers.Application.editCompany(id:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """updateCompany""","""controllers.Application.updateCompany()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """deleteCompany/$id<[^/]+>""","""controllers.Application.deleteCompany(id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """shoesGetHelper""","""controllers.Application.shoes_form_helper()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """shoesPostHelper""","""controllers.Application.shoes_post_helper()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """product""","""controllers.Application.frmProduct()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """postProduct""","""controllers.Application.postProduct()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """listMovie""","""controllers.Application.listMovie()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """newMovie""","""controllers.Application.newMovie()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """createMovie""","""controllers.Application.createMovie()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """editMovie/$id<[^/]+>""","""controllers.Application.editMovie(id:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """updateMovie""","""controllers.Application.updateMovie()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """deleteMovie/$id<[^/]+>""","""controllers.Application.deleteMovie(id:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """profile""","""controllers.Application.kak()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """photo""","""controllers.Application.bar()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]] 
 }}
@@ -225,8 +257,8 @@ case controllers_Application_createCompany12(params) => {
 
 // @LINE:22
 case controllers_Application_editCompany13(params) => {
-   call(params.fromQuery[String]("id", None)) { (id) =>
-        invokeHandler(controllers.Application.editCompany(id), HandlerDef(this, "controllers.Application", "editCompany", Seq(classOf[String]),"GET", """""", Routes.prefix + """editCompany/;id"""))
+   call(params.fromPath[String]("id", None)) { (id) =>
+        invokeHandler(controllers.Application.editCompany(id), HandlerDef(this, "controllers.Application", "editCompany", Seq(classOf[String]),"GET", """""", Routes.prefix + """editCompany/$id<[^/]+>"""))
    }
 }
         
@@ -241,8 +273,8 @@ case controllers_Application_updateCompany14(params) => {
 
 // @LINE:25
 case controllers_Application_deleteCompany15(params) => {
-   call(params.fromQuery[String]("id", None)) { (id) =>
-        invokeHandler(controllers.Application.deleteCompany(id), HandlerDef(this, "controllers.Application", "deleteCompany", Seq(classOf[String]),"GET", """""", Routes.prefix + """deleteCompany/;id"""))
+   call(params.fromPath[String]("id", None)) { (id) =>
+        invokeHandler(controllers.Application.deleteCompany(id), HandlerDef(this, "controllers.Application", "deleteCompany", Seq(classOf[String]),"GET", """""", Routes.prefix + """deleteCompany/$id<[^/]+>"""))
    }
 }
         
@@ -263,24 +295,88 @@ case controllers_Application_shoes_post_helper17(params) => {
 }
         
 
+// @LINE:31
+case controllers_Application_frmProduct18(params) => {
+   call { 
+        invokeHandler(controllers.Application.frmProduct(), HandlerDef(this, "controllers.Application", "frmProduct", Nil,"GET", """""", Routes.prefix + """product"""))
+   }
+}
+        
+
 // @LINE:32
-case controllers_Assets_at18(params) => {
+case controllers_Application_postProduct19(params) => {
+   call { 
+        invokeHandler(controllers.Application.postProduct(), HandlerDef(this, "controllers.Application", "postProduct", Nil,"POST", """""", Routes.prefix + """postProduct"""))
+   }
+}
+        
+
+// @LINE:35
+case controllers_Application_listMovie20(params) => {
+   call { 
+        invokeHandler(controllers.Application.listMovie(), HandlerDef(this, "controllers.Application", "listMovie", Nil,"GET", """""", Routes.prefix + """listMovie"""))
+   }
+}
+        
+
+// @LINE:36
+case controllers_Application_newMovie21(params) => {
+   call { 
+        invokeHandler(controllers.Application.newMovie(), HandlerDef(this, "controllers.Application", "newMovie", Nil,"GET", """""", Routes.prefix + """newMovie"""))
+   }
+}
+        
+
+// @LINE:37
+case controllers_Application_createMovie22(params) => {
+   call { 
+        invokeHandler(controllers.Application.createMovie(), HandlerDef(this, "controllers.Application", "createMovie", Nil,"POST", """""", Routes.prefix + """createMovie"""))
+   }
+}
+        
+
+// @LINE:38
+case controllers_Application_editMovie23(params) => {
+   call(params.fromPath[String]("id", None)) { (id) =>
+        invokeHandler(controllers.Application.editMovie(id), HandlerDef(this, "controllers.Application", "editMovie", Seq(classOf[String]),"GET", """""", Routes.prefix + """editMovie/$id<[^/]+>"""))
+   }
+}
+        
+
+// @LINE:39
+case controllers_Application_updateMovie24(params) => {
+   call { 
+        invokeHandler(controllers.Application.updateMovie(), HandlerDef(this, "controllers.Application", "updateMovie", Nil,"POST", """""", Routes.prefix + """updateMovie"""))
+   }
+}
+        
+
+// @LINE:40
+case controllers_Application_deleteMovie25(params) => {
+   call(params.fromPath[String]("id", None)) { (id) =>
+        invokeHandler(controllers.Application.deleteMovie(id), HandlerDef(this, "controllers.Application", "deleteMovie", Seq(classOf[String]),"GET", """""", Routes.prefix + """deleteMovie/$id<[^/]+>"""))
+   }
+}
+        
+
+// @LINE:42
+case controllers_Assets_at26(params) => {
    call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
         invokeHandler(controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]),"GET", """ Map static resources from the /public folder to the /assets URL path""", Routes.prefix + """assets/$file<.+>"""))
    }
 }
         
 
-// @LINE:33
-case controllers_Application_kak19(params) => {
+// @LINE:43
+case controllers_Application_kak27(params) => {
    call { 
         invokeHandler(controllers.Application.kak(), HandlerDef(this, "controllers.Application", "kak", Nil,"GET", """""", Routes.prefix + """profile"""))
    }
 }
         
 
-// @LINE:34
-case controllers_Application_bar20(params) => {
+// @LINE:44
+case controllers_Application_bar28(params) => {
    call { 
         invokeHandler(controllers.Application.bar(), HandlerDef(this, "controllers.Application", "bar", Nil,"GET", """""", Routes.prefix + """photo"""))
    }

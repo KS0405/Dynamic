@@ -16,9 +16,28 @@ POST    /postSneakers               controllers.Application.post()
 
 GET     /listCompany                controllers.Application.listCompany()
 
+GET     /newCompany                 controllers.Application.newCompany()
+POST    /createCompany              controllers.Application.createCompany()
+
+GET     /editCompany/:id            controllers.Application.editCompany(id:String)
+POST    /updateCompany              controllers.Application.updateCompany()
+
+GET     /deleteCompany/:id          controllers.Application.deleteCompany(id:String)
+
+
 GET      /shoesGetHelper             controllers.Application.shoes_form_helper()
 POST    /shoesPostHelper              controllers.Application.shoes_post_helper()
 
+GET     /product                           controllers.Application.frmProduct()
+POST    /postProduct                        controllers.Application.postProduct()
+
+
+GET     /listMovie                  controllers.Application.listMovie()
+GET     /newMovie                   controllers.Application.newMovie()
+POST     /createMovie                controllers.Application.createMovie()
+GET     /editMovie/:id                  controllers.Application.editMovie(id:String)
+POST    /updateMovie                controllers.Application.updateMovie()
+GET     /deleteMovie/:id            controllers.Application.deleteMovie(id:String)
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 GET     /profile                    controllers.Application.kak()

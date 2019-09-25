@@ -7,15 +7,20 @@
         <th>ชื่อบริษัท</th>
         <th>ที่อยู่</th>
         <th>รายละเอียด</th>
-        <th><a href="/newCompany">เพิ่มรายชื่อบริษัทใหม่</a> </th>
+        <td><a href="/newCompany" class="btn btn-info">เพิ่มรายชื่อบริษัท</a></td>
     </tr>
-
     @for(company <-companyList){
         <tr>
             <td>@company.getId</td>
             <td>@company.getName</td>
             <td>@company.getAddress</td>
             <td>@company.getDetail</td>
+            <td>
+                <a href="/editCompany/@company.getId" class="btn btn-info">แก้ไข</a>
+                <a href="/deleteCompany/@company.getId"class="btn btn-danger"
+                onclick="return confirm('โปรดยืนยันการลบข้อมูลบริษัทที่เลือก?')"
+                >ลบ</a>
+            </td>
 
         </tr>
     }

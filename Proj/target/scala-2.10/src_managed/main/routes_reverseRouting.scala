@@ -1,6 +1,6 @@
-// @SOURCE:D:/Dynamic/Proj/conf/routes
-// @HASH:2118e216ae499686f985afd66a52aae938c66cad
-// @DATE:Tue Sep 10 22:50:11 ICT 2019
+// @SOURCE:D:/Proj/conf/routes
+// @HASH:2a23f5647d217e469e915269c5058f7d302eebe7
+// @DATE:Wed Sep 25 13:09:22 ICT 2019
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -13,9 +13,17 @@ import play.libs.F
 import Router.queryString
 
 
-// @LINE:34
-// @LINE:33
+// @LINE:44
+// @LINE:43
+// @LINE:42
+// @LINE:40
+// @LINE:39
+// @LINE:38
+// @LINE:37
+// @LINE:36
+// @LINE:35
 // @LINE:32
+// @LINE:31
 // @LINE:29
 // @LINE:28
 // @LINE:25
@@ -36,11 +44,11 @@ import Router.queryString
 // @LINE:6
 package controllers {
 
-// @LINE:32
+// @LINE:42
 class ReverseAssets {
     
 
-// @LINE:32
+// @LINE:42
 def at(file:String): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
 }
@@ -49,8 +57,16 @@ def at(file:String): Call = {
 }
                           
 
-// @LINE:34
-// @LINE:33
+// @LINE:44
+// @LINE:43
+// @LINE:40
+// @LINE:39
+// @LINE:38
+// @LINE:37
+// @LINE:36
+// @LINE:35
+// @LINE:32
+// @LINE:31
 // @LINE:29
 // @LINE:28
 // @LINE:25
@@ -92,13 +108,19 @@ def Mains(): Call = {
 
 // @LINE:25
 def deleteCompany(id:String): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "deleteCompany/;id" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("id", id)))))
+   Call("GET", _prefix + { _defaultPrefix } + "deleteCompany/" + implicitly[PathBindable[String]].unbind("id", dynamicString(id)))
 }
                                                 
 
-// @LINE:34
+// @LINE:44
 def bar(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "photo")
+}
+                                                
+
+// @LINE:38
+def editMovie(id:String): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "editMovie/" + implicitly[PathBindable[String]].unbind("id", dynamicString(id)))
 }
                                                 
 
@@ -120,13 +142,25 @@ def Target(): Call = {
 }
                                                 
 
+// @LINE:35
+def listMovie(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "listMovie")
+}
+                                                
+
+// @LINE:39
+def updateMovie(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "updateMovie")
+}
+                                                
+
 // @LINE:29
 def shoes_post_helper(): Call = {
    Call("POST", _prefix + { _defaultPrefix } + "shoesPostHelper")
 }
                                                 
 
-// @LINE:33
+// @LINE:43
 def kak(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "profile")
 }
@@ -141,6 +175,12 @@ def newCompany(): Call = {
 // @LINE:8
 def hobby(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "Hobby")
+}
+                                                
+
+// @LINE:31
+def frmProduct(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "product")
 }
                                                 
 
@@ -162,15 +202,33 @@ def shoes_form_helper(): Call = {
 }
                                                 
 
+// @LINE:37
+def createMovie(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "createMovie")
+}
+                                                
+
 // @LINE:22
 def editCompany(id:String): Call = {
-   Call("GET", _prefix + { _defaultPrefix } + "editCompany/;id" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("id", id)))))
+   Call("GET", _prefix + { _defaultPrefix } + "editCompany/" + implicitly[PathBindable[String]].unbind("id", dynamicString(id)))
+}
+                                                
+
+// @LINE:36
+def newMovie(): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "newMovie")
 }
                                                 
 
 // @LINE:9
 def travel(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "Travel")
+}
+                                                
+
+// @LINE:32
+def postProduct(): Call = {
+   Call("POST", _prefix + { _defaultPrefix } + "postProduct")
 }
                                                 
 
@@ -186,6 +244,12 @@ def index(): Call = {
 }
                                                 
 
+// @LINE:40
+def deleteMovie(id:String): Call = {
+   Call("GET", _prefix + { _defaultPrefix } + "deleteMovie/" + implicitly[PathBindable[String]].unbind("id", dynamicString(id)))
+}
+                                                
+
 // @LINE:17
 def listCompany(): Call = {
    Call("GET", _prefix + { _defaultPrefix } + "listCompany")
@@ -198,9 +262,17 @@ def listCompany(): Call = {
                   
 
 
-// @LINE:34
-// @LINE:33
+// @LINE:44
+// @LINE:43
+// @LINE:42
+// @LINE:40
+// @LINE:39
+// @LINE:38
+// @LINE:37
+// @LINE:36
+// @LINE:35
 // @LINE:32
+// @LINE:31
 // @LINE:29
 // @LINE:28
 // @LINE:25
@@ -221,11 +293,11 @@ def listCompany(): Call = {
 // @LINE:6
 package controllers.javascript {
 
-// @LINE:32
+// @LINE:42
 class ReverseAssets {
     
 
-// @LINE:32
+// @LINE:42
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Assets.at",
    """
@@ -239,8 +311,16 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:34
-// @LINE:33
+// @LINE:44
+// @LINE:43
+// @LINE:40
+// @LINE:39
+// @LINE:38
+// @LINE:37
+// @LINE:36
+// @LINE:35
+// @LINE:32
+// @LINE:31
 // @LINE:29
 // @LINE:28
 // @LINE:25
@@ -300,18 +380,29 @@ def deleteCompany : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.deleteCompany",
    """
       function(id) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "deleteCompany/;id" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("id", id)])})
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "deleteCompany/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("id", encodeURIComponent(id))})
       }
    """
 )
                         
 
-// @LINE:34
+// @LINE:44
 def bar : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.bar",
    """
       function() {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "photo"})
+      }
+   """
+)
+                        
+
+// @LINE:38
+def editMovie : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.editMovie",
+   """
+      function(id) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "editMovie/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("id", encodeURIComponent(id))})
       }
    """
 )
@@ -350,6 +441,28 @@ def Target : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
+// @LINE:35
+def listMovie : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.listMovie",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "listMovie"})
+      }
+   """
+)
+                        
+
+// @LINE:39
+def updateMovie : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.updateMovie",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "updateMovie"})
+      }
+   """
+)
+                        
+
 // @LINE:29
 def shoes_post_helper : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.shoes_post_helper",
@@ -361,7 +474,7 @@ def shoes_post_helper : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:33
+// @LINE:43
 def kak : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.kak",
    """
@@ -389,6 +502,17 @@ def hobby : JavascriptReverseRoute = JavascriptReverseRoute(
    """
       function() {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "Hobby"})
+      }
+   """
+)
+                        
+
+// @LINE:31
+def frmProduct : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.frmProduct",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "product"})
       }
    """
 )
@@ -427,12 +551,34 @@ def shoes_form_helper : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
+// @LINE:37
+def createMovie : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.createMovie",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "createMovie"})
+      }
+   """
+)
+                        
+
 // @LINE:22
 def editCompany : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.editCompany",
    """
       function(id) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "editCompany/;id" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("id", id)])})
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "editCompany/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("id", encodeURIComponent(id))})
+      }
+   """
+)
+                        
+
+// @LINE:36
+def newMovie : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.newMovie",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "newMovie"})
       }
    """
 )
@@ -444,6 +590,17 @@ def travel : JavascriptReverseRoute = JavascriptReverseRoute(
    """
       function() {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "Travel"})
+      }
+   """
+)
+                        
+
+// @LINE:32
+def postProduct : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.postProduct",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "postProduct"})
       }
    """
 )
@@ -471,6 +628,17 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
+// @LINE:40
+def deleteMovie : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.deleteMovie",
+   """
+      function(id) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "deleteMovie/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("id", encodeURIComponent(id))})
+      }
+   """
+)
+                        
+
 // @LINE:17
 def listCompany : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.listCompany",
@@ -488,9 +656,17 @@ def listCompany : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
-// @LINE:34
-// @LINE:33
+// @LINE:44
+// @LINE:43
+// @LINE:42
+// @LINE:40
+// @LINE:39
+// @LINE:38
+// @LINE:37
+// @LINE:36
+// @LINE:35
 // @LINE:32
+// @LINE:31
 // @LINE:29
 // @LINE:28
 // @LINE:25
@@ -512,11 +688,11 @@ def listCompany : JavascriptReverseRoute = JavascriptReverseRoute(
 package controllers.ref {
 
 
-// @LINE:32
+// @LINE:42
 class ReverseAssets {
     
 
-// @LINE:32
+// @LINE:42
 def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Assets.at(path, file), HandlerDef(this, "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
 )
@@ -525,8 +701,16 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
-// @LINE:34
-// @LINE:33
+// @LINE:44
+// @LINE:43
+// @LINE:40
+// @LINE:39
+// @LINE:38
+// @LINE:37
+// @LINE:36
+// @LINE:35
+// @LINE:32
+// @LINE:31
 // @LINE:29
 // @LINE:28
 // @LINE:25
@@ -568,13 +752,19 @@ def Mains(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 
 // @LINE:25
 def deleteCompany(id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Application.deleteCompany(id), HandlerDef(this, "controllers.Application", "deleteCompany", Seq(classOf[String]), "GET", """""", _prefix + """deleteCompany/;id""")
+   controllers.Application.deleteCompany(id), HandlerDef(this, "controllers.Application", "deleteCompany", Seq(classOf[String]), "GET", """""", _prefix + """deleteCompany/$id<[^/]+>""")
 )
                       
 
-// @LINE:34
+// @LINE:44
 def bar(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.bar(), HandlerDef(this, "controllers.Application", "bar", Seq(), "GET", """""", _prefix + """photo""")
+)
+                      
+
+// @LINE:38
+def editMovie(id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.editMovie(id), HandlerDef(this, "controllers.Application", "editMovie", Seq(classOf[String]), "GET", """""", _prefix + """editMovie/$id<[^/]+>""")
 )
                       
 
@@ -596,13 +786,25 @@ def Target(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 )
                       
 
+// @LINE:35
+def listMovie(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.listMovie(), HandlerDef(this, "controllers.Application", "listMovie", Seq(), "GET", """""", _prefix + """listMovie""")
+)
+                      
+
+// @LINE:39
+def updateMovie(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.updateMovie(), HandlerDef(this, "controllers.Application", "updateMovie", Seq(), "POST", """""", _prefix + """updateMovie""")
+)
+                      
+
 // @LINE:29
 def shoes_post_helper(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.shoes_post_helper(), HandlerDef(this, "controllers.Application", "shoes_post_helper", Seq(), "POST", """""", _prefix + """shoesPostHelper""")
 )
                       
 
-// @LINE:33
+// @LINE:43
 def kak(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.kak(), HandlerDef(this, "controllers.Application", "kak", Seq(), "GET", """""", _prefix + """profile""")
 )
@@ -617,6 +819,12 @@ def newCompany(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 // @LINE:8
 def hobby(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.hobby(), HandlerDef(this, "controllers.Application", "hobby", Seq(), "GET", """""", _prefix + """Hobby""")
+)
+                      
+
+// @LINE:31
+def frmProduct(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.frmProduct(), HandlerDef(this, "controllers.Application", "frmProduct", Seq(), "GET", """""", _prefix + """product""")
 )
                       
 
@@ -638,15 +846,33 @@ def shoes_form_helper(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRe
 )
                       
 
+// @LINE:37
+def createMovie(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.createMovie(), HandlerDef(this, "controllers.Application", "createMovie", Seq(), "POST", """""", _prefix + """createMovie""")
+)
+                      
+
 // @LINE:22
 def editCompany(id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Application.editCompany(id), HandlerDef(this, "controllers.Application", "editCompany", Seq(classOf[String]), "GET", """""", _prefix + """editCompany/;id""")
+   controllers.Application.editCompany(id), HandlerDef(this, "controllers.Application", "editCompany", Seq(classOf[String]), "GET", """""", _prefix + """editCompany/$id<[^/]+>""")
+)
+                      
+
+// @LINE:36
+def newMovie(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.newMovie(), HandlerDef(this, "controllers.Application", "newMovie", Seq(), "GET", """""", _prefix + """newMovie""")
 )
                       
 
 // @LINE:9
 def travel(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.travel(), HandlerDef(this, "controllers.Application", "travel", Seq(), "GET", """""", _prefix + """Travel""")
+)
+                      
+
+// @LINE:32
+def postProduct(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.postProduct(), HandlerDef(this, "controllers.Application", "postProduct", Seq(), "POST", """""", _prefix + """postProduct""")
 )
                       
 
@@ -659,6 +885,12 @@ def createCompany(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 // @LINE:6
 def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.index(), HandlerDef(this, "controllers.Application", "index", Seq(), "GET", """ Home page""", _prefix + """""")
+)
+                      
+
+// @LINE:40
+def deleteMovie(id:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.deleteMovie(id), HandlerDef(this, "controllers.Application", "deleteMovie", Seq(classOf[String]), "GET", """""", _prefix + """deleteMovie/$id<[^/]+>""")
 )
                       
 

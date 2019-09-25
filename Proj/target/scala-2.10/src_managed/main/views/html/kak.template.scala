@@ -70,8 +70,8 @@ Seq[Any](format.raw/*1.4*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Wed Sep 04 11:11:04 ICT 2019
-                    SOURCE: D:/Dynamic/Proj/app/views/kak.scala.html
+                    DATE: Wed Sep 25 10:40:53 ICT 2019
+                    SOURCE: D:/Proj/app/views/kak.scala.html
                     HASH: 50d0373f218b2a2515f54e4a6c2038856df9cd5a
                     MATRIX: 765->1|860->3
                     LINES: 26->1|29->1

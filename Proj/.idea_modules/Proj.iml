@@ -14,12 +14,8 @@
       <sourceFolder url="file://$MODULE_DIR$/../test" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../test" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../test\resources" isTestSource="true" />
-      <excludeFolder url="file://$MODULE_DIR$/../target\scala-2.10\cache" />
       <excludeFolder url="file://$MODULE_DIR$/../target\scala-2.10\classes" />
-      <excludeFolder url="file://$MODULE_DIR$/../target\scala-2.10\classes_managed" />
-      <excludeFolder url="file://$MODULE_DIR$/../target\native_libraries" />
       <excludeFolder url="file://$MODULE_DIR$/../target\resolution-cache" />
-      <excludeFolder url="file://$MODULE_DIR$/../target\scala-2.10\resource_managed" />
       <excludeFolder url="file://$MODULE_DIR$/../target\streams" />
     </content>
     <orderEntry type="inheritedJdk" />
@@ -89,6 +85,7 @@
     <orderEntry type="library" name="SBT: org.avaje.ebeanorm:avaje-ebeanorm:3.2.2" level="project" />
     <orderEntry type="library" name="SBT: org.avaje.ebeanorm:avaje-ebeanorm-agent:3.2.1" level="project" />
     <orderEntry type="library" name="SBT: org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.1.Final" level="project" />
+    <orderEntry type="library" name="SBT: mysql:mysql-connector-java:5.1.47" level="project" />
     <orderEntry type="library" name="SBT: com.typesafe.play:play-cache_2.10:2.2.6" level="project" />
     <orderEntry type="library" name="SBT: net.sf.ehcache:ehcache-core:2.6.6" level="project" />
     <orderEntry scope="TEST" type="library" name="SBT: com.typesafe.play:play-test_2.10:2.2.6:test" level="project" />

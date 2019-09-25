@@ -35,18 +35,23 @@ Seq[Any](format.raw/*1.29*/("""
         <th>ชื่อบริษัท</th>
         <th>ที่อยู่</th>
         <th>รายละเอียด</th>
-        <th><a href="/newCompany">เพิ่มรายชื่อบริษัทใหม่</a> </th>
+        <td><a href="/newCompany" class="btn btn-info">เพิ่มรายชื่อบริษัท</a></td>
     </tr>
-
-    """),_display_(Seq[Any](/*13.6*/for(company <-companyList) yield /*13.32*/{_display_(Seq[Any](format.raw/*13.33*/("""
+    """),_display_(Seq[Any](/*12.6*/for(company <-companyList) yield /*12.32*/{_display_(Seq[Any](format.raw/*12.33*/("""
         <tr>
-            <td>"""),_display_(Seq[Any](/*15.18*/company/*15.25*/.getId)),format.raw/*15.31*/("""</td>
-            <td>"""),_display_(Seq[Any](/*16.18*/company/*16.25*/.getName)),format.raw/*16.33*/("""</td>
-            <td>"""),_display_(Seq[Any](/*17.18*/company/*17.25*/.getAddress)),format.raw/*17.36*/("""</td>
-            <td>"""),_display_(Seq[Any](/*18.18*/company/*18.25*/.getDetail)),format.raw/*18.35*/("""</td>
+            <td>"""),_display_(Seq[Any](/*14.18*/company/*14.25*/.getId)),format.raw/*14.31*/("""</td>
+            <td>"""),_display_(Seq[Any](/*15.18*/company/*15.25*/.getName)),format.raw/*15.33*/("""</td>
+            <td>"""),_display_(Seq[Any](/*16.18*/company/*16.25*/.getAddress)),format.raw/*16.36*/("""</td>
+            <td>"""),_display_(Seq[Any](/*17.18*/company/*17.25*/.getDetail)),format.raw/*17.35*/("""</td>
+            <td>
+                <a href="/editCompany/"""),_display_(Seq[Any](/*19.40*/company/*19.47*/.getId)),format.raw/*19.53*/("""" class="btn btn-info">แก้ไข</a>
+                <a href="/deleteCompany/"""),_display_(Seq[Any](/*20.42*/company/*20.49*/.getId)),format.raw/*20.55*/(""""class="btn btn-danger"
+                onclick="return confirm('โปรดยืนยันการลบข้อมูลบริษัทที่เลือก?')"
+                >ลบ</a>
+            </td>
 
         </tr>
-    """)))})),format.raw/*21.6*/("""
+    """)))})),format.raw/*26.6*/("""
 </table>
 """))}
     }
@@ -60,11 +65,11 @@ Seq[Any](format.raw/*1.29*/("""
 }
                 /*
                     -- GENERATED --
-                    DATE: Tue Sep 10 22:50:11 ICT 2019
-                    SOURCE: D:/Dynamic/Proj/app/views/listCompany.scala.html
-                    HASH: 144d40f227aeba4d68880819c5676aa4f432657d
-                    MATRIX: 787->1|908->28|1204->289|1246->315|1285->316|1352->347|1368->354|1396->360|1455->383|1471->390|1501->398|1560->421|1576->428|1609->439|1668->462|1684->469|1716->479|1773->505
-                    LINES: 26->1|29->1|41->13|41->13|41->13|43->15|43->15|43->15|44->16|44->16|44->16|45->17|45->17|45->17|46->18|46->18|46->18|49->21
+                    DATE: Wed Sep 25 11:32:59 ICT 2019
+                    SOURCE: D:/Proj/app/views/listCompany.scala.html
+                    HASH: 3fa77283c9c7422f831808e2bd07637a65bbbdeb
+                    MATRIX: 787->1|908->28|1219->304|1261->330|1300->331|1367->362|1383->369|1411->375|1470->398|1486->405|1516->413|1575->436|1591->443|1624->454|1683->477|1699->484|1731->494|1829->556|1845->563|1873->569|1983->643|1999->650|2027->656|2225->823
+                    LINES: 26->1|29->1|40->12|40->12|40->12|42->14|42->14|42->14|43->15|43->15|43->15|44->16|44->16|44->16|45->17|45->17|45->17|47->19|47->19|47->19|48->20|48->20|48->20|54->26
                     -- GENERATED --
                 */
             

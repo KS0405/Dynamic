@@ -5,8 +5,8 @@ version := "1.0-SNAPSHOT"
 libraryDependencies ++= Seq(
   javaJdbc,
   javaEbean,
-  "mysql"%"mysql-connector-java"%"5.1.47",
-  cache
+  cache,
+  "mysql"%"mysql-connector-java"%"5.1.47"
 )
 
 play.Project.playJavaSettings

@@ -2,13 +2,12 @@ package models;
 
 import play.db.ebean.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Yok on 9/10/2019.
+ * Created by konkanok on 9/10/2019.
  */
 @Entity
 @Table(name="tbCompany")
@@ -16,7 +15,13 @@ public class Company extends Model{
     @Id
     private String id;
     private String name,address,detail;
+    @OneToMany(mappedBy = "company",cascade = CascadeType.ALL)
+    @OrderBy("title asc ")
+    private  List<Movie> movieList=new ArrayList<Movie>();
 
+    public List<Movie> getMovieList() {
+        return movieList;
+    }
 
     public Company() {
     }

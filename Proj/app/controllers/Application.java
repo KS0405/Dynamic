@@ -1,32 +1,25 @@
 package controllers;
 
-import models.Company;
-import models.Shoes;
-import models.Sneakers;
+import models.*;
 import play.api.templates.Html;
 import play.data.DynamicForm;
 import play.data.Form;
 import play.mvc.*;
 
 import views.html.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
-
-
-
 public class Application extends Controller {
-    public static Result main(Html content) {
-        return ok(Mymain.render(content));
+    public static Result main(Html content) {return (Result) ok(Mymain.render(content));
     }
     public static Result index(){
         return main(home.render());
     }
 
-    public static Result kak() {return ok(kak.render());}
+    public static Result kak() {return (Result) ok(kak.render());}
 
-    public static Result bar() {return ok(bar.render());}
+    public static Result bar() {return (Result) ok(bar.render());}
 
     public static Result Pro() {return main(kak.render());}
 
@@ -154,22 +147,130 @@ public class Application extends Controller {
    public static Result newCompany(){//ใช้สำหรับเรียกวิวรับข้อมูล หลังผู้ใช้กรอกข้อมูล
        companyForm= Form.form(Company.class);
 
-       return Application.main(newCompany.render(companyForm));
+       return Application.main(new_Company.render(companyForm));
    }
+
     public static Result createCompany(){//ใช้สำหรับรับค่าจากการป้อนของผู้ใช้ระบบนำไปบันทึกหรือเพิ่ม
-        return ok();
+        Form<Company>newForm=companyForm.bindFromRequest();
+        if(newForm.hasErrors()){
+            flash("err","ท่านป้อนข้อมูลไม่สมบูรณ์ กรุณาตรวจสอบและแก้ไขให้ถูกต้อง");
+            return Application.main(new_Company.render(newForm));
+        }else {
+            company=newForm.get();
+            Company test= Company.finder.byId(company.getId());
+            if(test!= null){
+                flash("err","รหัสบริษัทใหม่ที่กำหนด ซ้ำกับที่มีอยู่แล้วในระบบ กรุณาตรวจสอบและแก้ไขให้ถูกต้อง");
+                return Application.main(new_Company.render(newForm));
+            }else {
+                Company.create(company);
+                return listCompany();
+            }
+        }
     }
 
     public static Result editCompany(String id){//ใช้สำหรับการค้นหาบริษัทที่ต้องการแก้ไขและเรียกวิวแก้ไขข้อมูล
-        return ok();
+        company= Company.finder.byId(id);
+        if(company==null){
+            return listCompany();
+        }else {
+            companyForm=Form.form(Company.class).fill(company);
+            return Application.main(editCompany.render(companyForm));
+        }
+
     }
     public static Result updateCompany(){//ใช้สำหรับรับค่าที่ผู้ใช้ป้อนแล้วนำไปแก้ไข
-        return ok();
-    }
+        Form<Company>newForm=companyForm.bindFromRequest();
+        if(newForm.hasErrors()){
+            flash("err","ท่านป้อนข้อมูลไม่สมบูรณ์ กรุณาตรวจสอบและแก้ไขให้ถูกต้อง");
+            return Application.main(editCompany.render(newForm));
+        }else {
+            company=newForm.get();
+            Company.update(company);
+            return listCompany();
+            }
+        }
+
     public static Result deleteCompany(String id){//ใช้สำหรับการค้นหาบริษัทที่ต้องการลบและทำการลบข้อมูล
-       return ok();
+       company=Company.finder.byId(id);
+        if(company!=null){
+            Company.delete(company);
+        }
+        return listCompany();
     }
 
+
+    public static Result frmProduct(){
+        return ok(frmProduct.render());
+    }
+    public static  Result postProduct(){
+        DynamicForm pForm = play.data.Form.form().bindFromRequest();
+        Product product = new Product();
+        product.setId(pForm.get("id"));
+        product.setName(pForm.get("name"));
+        product.setPrice(Double.parseDouble(pForm.get("price")));
+        product.setAmount(Double.parseDouble(pForm.get("amount")));
+
+        return ok(showProduct.render(product));
+    }
+    public static List<Movie> movieList=new ArrayList<Movie>();
+    public static Form<Movie> movieForm=Form.form(Movie.class);
+    public static Movie movie;
+    public static Result listMovie(){
+        movieList=Movie.list();
+        return Application.main(listMovie.render(movieList));
+    }
+    public static Result newMovie(){
+        companyList=Company.list();
+        movieForm=Form.form(Movie.class);
+        return Application.main(newMovie.render(movieForm,companyList));
+    }
+    public static Result createMovie(){
+        Form<Movie> newForm = movieForm.bindFromRequest();
+        if (newForm.hasErrors()) {
+            flash("errMessage", "ป้อนข้อมูลไม่ถูกต้อง/ไม่สมบูรณ์");
+            return Application.main(newMovie.render(newForm, companyList));
+        } else {
+            movie = newForm.get();
+            if (movie.finder.byId(movie.getId()) != null) {
+                flash("errMessage", "รหัสภาพยนต์ที่กำหนด มีแล้วในระบบ กรุณาแก้ไขใหม่");
+                return Application.main(newMovie.render(newForm,companyList));
+            } else {
+                Movie.create(movie);
+                return listMovie();
+            }
+        }
+
+    }
+    public static Result editMovie(String id){
+        companyList=Company.list();
+        movie=Movie.finder.byId(id);
+        if(movie==null){
+            return listMovie();
+        }else{
+            movieForm=Form.form(Movie.class).fill(movie);
+            return Application.main(editMovie.render(movieForm,companyList));
+        }
+    }
+
+    public static Result updateMovie(){
+        Form<Movie>updateForm=movieForm.bindFromRequest();
+        companyList=Company.list();
+        if(updateForm.hasErrors()){
+            flash("errMessage", "ป้อนข้อมูลไม่ถูกต้อง/ไม่สมบูรณ์");
+            return Application.main(editMovie.render(updateForm,companyList));
+        }else {
+            movie=updateForm.get();
+            movie.update(movie);
+            return listMovie();
+        }
+    }
+    public static Result deleteMovie(String id){
+        movie=Movie.finder.byId(id);
+        if(movie!=null){
+            Movie.delete(movie);
+        }
+        return listMovie();
+    }
 }
 
 

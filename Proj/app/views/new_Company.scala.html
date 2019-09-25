@@ -1,0 +1,20 @@
+@(companyForm:Form[Company])
+@import helper._;
+    <h1>รับข้อมูลบริษัทใหม่</h1>
+    @form(action = routes.Application.createCompany()) {
+    @inputText(companyForm("id"), 'label -> "รหัสบริษัท", 'size -> "13", 'maxlegth -> "10")
+    @inputText(companyForm("name"), 'label -> "ชื่อบริษัท", 'size -> "50", 'maxlegth -> "40")
+    @textarea(companyForm("address"), 'label -> "ที่อยู่", 'row -> "5", 'col -> "50")
+    @textarea(companyForm("detail"), 'label -> "รายละเอียด", 'row -> "5", 'col -> "50")
+
+    <input type="submit" value="บันทึก" class="btn btn-success">
+    <input type="reset" value="เคลียร์" class="btn btn-danger">
+
+}
+
+    @if(flash.containsKey("err")){
+        <div class="alert alert-danger">
+    <strong>Error!</strong>
+    @flash.get("err")
+        </div>
+    }

@@ -45,13 +45,13 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
                 </top>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="/Profile">lab 1 Profile</a>
-                    <a class="dropdown-item" href="/lab2">lab 2 Table</a>
+                    <a class="dropdown-item" href="/Mains">lab 2 Table</a>
                     <a class="dropdown-item" href="/ShowSneak">lab 3 Class</a>
                     <a class="dropdown-item" href="/ShowSneakersList">Lab 4 Show List</a>
                     <a class="dropdown-item" href="/SneakersForm">Lab 5 SneakersForm</a>
                     <a class="dropdown-item" href="/shoesGetHelper">Lab 6 helper</a>
                     <a class="dropdown-item" href="/listCompany">Lab 7 DB Company</a>
-
+                    <a class="dropdown-item" href="/listMovie">Lab 8 แสดงรายชื่อภาพยนต์</a>
                 </div>
             </div>
         </div>
@@ -72,9 +72,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 }
                 /*
                     -- GENERATED --
-                    DATE: Tue Sep 10 22:03:25 ICT 2019
-                    SOURCE: D:/Dynamic/Proj/app/views/manu.scala.html
-                    HASH: d4f6ac63b805d6b90dd7e3c935cf9eae3561d790
+                    DATE: Wed Sep 25 11:25:23 ICT 2019
+                    SOURCE: D:/Proj/app/views/manu.scala.html
+                    HASH: 36aae83cc7dfc5bde8db9fc208fb39f4946e497c
                     MATRIX: 854->0
                     LINES: 29->1
                     -- GENERATED --
